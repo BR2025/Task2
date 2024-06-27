@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alphabetical Order Function</title>
+    <style>
+        code {
+            display: block;
+            background-color: #f4f4f4;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin: 20px 0;
+            white-space: pre-wrap; /* Ensures the text wraps */
+        }
+    </style>
+</head>
+<body>
+    <h1>Alphabetical Order JavaScript Function</h1>
+    <p>Here is the JavaScript function that returns a passed string with letters in alphabetical order:</p>
+    <code>
+        &lt;script&gt;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;function alphabeticalOrder(str) {<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return str.split('').sort().join('');<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;}<br><br>
+        &nbsp;&nbsp;&nbsp;&nbsp;let exampleString = 'webmaster';<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;let sortedString = alphabeticalOrder(exampleString);<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;console.log(sortedString); // Expected Output: 'abeemrstw'<br>
+        &lt;/script&gt;
+    </code>
+</body>
+</html>

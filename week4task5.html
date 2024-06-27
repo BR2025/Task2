@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form Validation</title>
+    <style>
+        .error {
+            color: red;
+        }
+        .error input, .error textarea {
+            border-color: red;
+        }
+    </style>
+    <script type="text/javascript">
+        function validateForm() {
+            var isValid = true;
+            
+            // Clear previous error messages
+            document.querySelectorAll('.error').forEach(function(el) {
+                el.classList.remove('error');
+                el.querySelector('.error-message').innerText = '';
+            });
+
+            // Validate Name
+            var name = document.getElementById("name");
+            if (name.value.trim() === "") {
+                setError(name, "This field is required");
+                isValid = false;
+            }
+
+            // Validate Email
+            var email = document.getElementById("email");
+            var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+            if (email.value.trim() === "") {
+                setError(email, "A valid email address is required");
+                isValid = false;
+            } else if (!emailPattern.test(email.value.trim())) {
+                setError(email, "A valid email address is required");
+                isValid = false;
+            }
+
+            // Validate Website
+            var website = document.getElementById("website");
+            var urlPattern = /^(https?|ftp):\/\/[^\s/$.?#].[^\s]*$/i;
+            if (website.value.trim() === "") {
+                setError(website, "A valid URL is required");
+                isValid = false;
+            } else if (!urlPattern.test(website.value.trim())) {
+                setError(website, "A valid URL is required");
+                isValid = false;
+            }
+
+            // Validate Message
+            var message = document.getElementById("message");
+            if (message.value.trim() === "") {
+                setError(message, "This field is required");
+                isValid = false;
+            }
+
+            return isValid;
+        }
+
+        function setError(element, message) {
+            var parent = element.parentElement;
+            parent.classList.add('error');
+            parent.querySelector('.error-message').innerText = message;
+        }
+    </script>
+</head>
+<body>
+    <form onsubmit="return validateForm()">
+        <div>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name">
+            <span class="error-message"></span>
+        </div>
+        <br>
+        <div>
+            <label for="email">Email:</label>
+            <input type="text" id="email" name="email">
+            <span class="error-message"></span>
+        </div>
+        <br>
+        <div>
+            <label for="website">Website:</label>
+            <input type="text" id="website" name="website">
+            <span class="error-message"></span>
+        </div>
+        <br>
+        <div>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message"></textarea>
+            <span class="error-message"></span>
+        </div>
+        <br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

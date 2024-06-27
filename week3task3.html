@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing Table</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .pricing-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .card {
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .card-title {
+            margin-bottom: 0;
+            font-weight: bold;
+        }
+        .card-price {
+            font-size: 36px;
+            margin-bottom: 0;
+        }
+        .card-price span {
+            font-size: 18px;
+            color: #6c757d;
+        }
+        .card-body ul {
+            padding: 0;
+            list-style: none;
+        }
+        .card-body ul li {
+            margin-bottom: 10px;
+        }
+        .btn-custom {
+            border-radius: 25px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container py-5">
+    <div class="pricing-header">
+        <h1 class="display-4">Pricing</h1>
+        <pre style="text-align: center;" class="lead">Quickly build an effective pricing table for your potential customers with this
+             Bootstrap example. It's built with default Bootstrap components and 
+             utilities with little customization.</pre>
+    </div>
+    <div class="row">
+        <!-- Free Plan -->
+        <div class="col-lg-4">
+            <div class="card mb-5 mb-lg-0">
+                <div class="card-body">
+                    <h5 class="card-title text-muted text-uppercase text-center">Free</h5>
+                    <h6 class="card-price text-center">$0<span class="period">/mo</span></h6>
+                    <hr>
+                    <ul style="text-align: center;">
+                        <li>10 users included</li>
+                        <li>2 GB of storage</li>
+                        <li>Email support</li>
+                        <li>Help center access</li>
+                    </ul>
+                    <div class="d-grid">
+                        <a href="#" class="btn btn-primary btn-block btn-custom text-uppercase">Sign up for free</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Pro Plan -->
+        <div class="col-lg-4">
+            <div class="card mb-5 mb-lg-0">
+                <div class="card-body">
+                    <h5 class="card-title text-muted text-uppercase text-center">Pro</h5>
+                    <h6 class="card-price text-center">$15<span class="period">/mo</span></h6>
+                    <hr>
+                    <ul style="text-align: center;">
+                        <li>20 users included</li>
+                        <li>10 GB of storage</li>
+                        <li>Priority email support</li>
+                        <li>Help center access</li>
+                    </ul>
+                    <div class="d-grid">
+                        <a href="#" class="btn btn-primary btn-block btn-custom text-uppercase">Get started</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Enterprise Plan -->
+        <div class="col-lg-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title text-muted text-uppercase text-center">Enterprise</h5>
+                    <h6 class="card-price text-center">$29<span class="period">/mo</span></h6>
+                    <hr>
+                    <ul style="text-align:center ;">
+                        <li>30 users included</li>
+                        <li>15 GB of storage</li>
+                        <li>Phone and email support</li>
+                        <li>Help center access</li>
+                    </ul>
+                    <div class="d-grid">
+                        <a href="#" class="btn btn-primary btn-block btn-custom text-uppercase">Contact us</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

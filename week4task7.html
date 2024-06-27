@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Train Animation</title>
+    <style>
+        #train {
+            position: relative;
+            left: 0;
+            transition: left 0.1s linear;
+        }
+        #animation-container {
+            width: 100%;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <div id="animation-container">
+        <img id="train" src="https://t3.ftcdn.net/jpg/03/05/13/66/360_F_305136644_q7axZG8HIcY01vepSYxiyyLnPxPqf80M.jpg" alt="Train">
+    </div>
+    <div>
+        <button onclick="startAnimation()">Start</button>
+        <button onclick="stopAnimation()">Stop</button>
+    </div>
+
+    <script>
+        let animation;
+        let position = 0;
+
+        function startAnimation() {
+            stopAnimation(); // Stop any ongoing animation before starting a new one
+            animation = setInterval(frame, 10);
+        }
+
+        function stopAnimation() {
+            clearInterval(animation);
+        }
+
+        function frame() {
+            position += 2; // Adjust the value to control the speed
+            document.getElementById("train").style.left = position + 'px';
+            
+            // Reset position if the train goes off the screen
+            if (position > window.innerWidth) {
+                position = -document.getElementById("train").width;
+            }
+        }
+    </script>
+</body>
+</html>

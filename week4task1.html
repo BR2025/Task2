@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reverse Number Code</title>
+    <style>
+        code {
+            display: block;
+            background-color: #f4f4f4;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin: 20px 0;
+            white-space: pre-wrap; /* Ensures the text wraps */
+        }
+    </style>
+</head>
+<body>
+    <h1>Reverse Number JavaScript Function</h1>
+    <p>Here is the JavaScript function that reverses a number:</p>
+    <code>
+        &lt;script&gt;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;function reverseNumber(num) {<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;let numStr = num.toString();<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;let reversedStr = numStr.split('').reverse().join('');<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;let reversedNum = parseInt(reversedStr, 10);<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return reversedNum;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;}<br><br>
+        &nbsp;&nbsp;&nbsp;&nbsp;let x = 32243;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;let reversedX = reverseNumber(x);<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;console.log(reversedX); // Expected Output: 34223<br>
+        &lt;/script&gt;
+    </code>
+</body>
+</html>
